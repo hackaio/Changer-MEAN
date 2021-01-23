@@ -1,8 +1,9 @@
 {
   "name": "functions",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
-    "test": "echo \"no test\""
+    "test": "echo \"no test\"",
+    "start": "bfast fs serve --port "
   },
   "dependencies": {
     "bfastnode": "^4.0.5"

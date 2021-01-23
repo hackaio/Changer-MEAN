@@ -1,9 +1,12 @@
-// const {BFast} = require('bfastnode');
-//
-// exports.helloWorld = BFast.functions().onHttpRequest('/hello', (request, response) => {
-//     // your logic
-//     response.send("Hello from BFast!");
-// });
+const {BFast} = require('bfastnode');
+
+exports.helloWorld = BFast.functions().onHttpRequest(
+    '/hello',
+    (request, response) => {
+        // your logic
+        response.send("Hello from BFast!");
+    }
+);
 //
 // exports.helloEvent = BFast.functions().onEvent("/hello", ({auth, payload, socket}) => {
 //     // your logic
