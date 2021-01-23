@@ -1,5 +1,5 @@
 const {bfast} = require("bfastnode");
-const {AuthService} = require('./services/auth.service');
+const {AuthService} = require('../services/auth.service');
 const authService = new AuthService();
 
 exports.registerFunction = bfast.functions().onPostHttpRequest(

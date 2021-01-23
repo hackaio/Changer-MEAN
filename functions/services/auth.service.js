@@ -2,12 +2,22 @@ const {bfast} = require("bfastnode");
 
 class AuthService {
     async login(username, password) {
-
+        if (!username){
+            throw {message: 'Please provide username'}
+        }
+        if (!password){
+            throw {message: 'Please provide password'}
+        }
+        return bfast.auth().logIn(username, password);
     }
 
     async register(data, type) {
+        data = JSON.parse(JSON.stringify(data));
         if (!type) {
             throw {message: 'Please specify user type'}
+        }
+        if (type && type !== 'provider' && type !== 'requester'){
+            throw {message: 'Please provide valid user type'}
         }
         if (!data) {
             throw {message: 'Please enter valid data'};
@@ -28,7 +38,7 @@ class AuthService {
                 throw {message: 'Please enter fullname field'};
             }
 
-            const username = data.username;
+            const username = data.email;
             const password = data.password;
             delete data.password;
             delete data.username;
