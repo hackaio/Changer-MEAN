@@ -1,1 +1,9 @@
-{"projectId":"changer","ignore":["**/node_modules/**","**/specs/**","**/*.specs.js","assets/**"]}
+{
+  "projectId": "changer",
+  "ignore": [
+    "**/node_modules/**",
+    "**/specs/**",
+    "**/*.specs.js",
+    "assets/**"
+  ]
+}
